@@ -1,0 +1,78 @@
+.LayersMenu {
+  color: #333;
+}
+
+.LayersMenu > h3 {
+  font-size: 16px;
+  margin: 24px 0px 5px;
+}
+
+.layers {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.layer {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  margin-bottom: 5px;
+  align-items: center;
+  grid-template-rows: 28px;
+}
+
+.layer > * {
+  height: 100%;
+}
+
+.layer.dropping:not(.dragging) {
+  outline: 2px solid #007bff;
+}
+
+.layer span {
+  border: 1px solid #bbb;
+  border-radius: 0px;
+  border-right-color: transparent;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 0px 0px 0px 8px;
+}
+
+.layer button:focus {
+  outline: 0px;
+  border: 1px solid #007bff;
+}
+
+.layer button {
+  padding: 0px;
+  display: block;
+  text-align: center;
+  width: 32px;
+  border: 1px solid #bbb;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.layer .drag {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right: none;
+  cursor: pointer;
+}
+
+.layer.active .drag {
+  color: transparent;
+  text-shadow: 0 0 0 #007bff;
+}
+
+/* .layer .drag:active {
+  cursor: grabbing;
+} */
+
+.layer .delete {
+  padding: 0px 0px 0px 3px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left: none;
+}

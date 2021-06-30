@@ -1,0 +1,100 @@
+.App {
+  height: 100vh;
+  color: #343434;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+canvas {
+  background: #fff;
+  padding: 0px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.panel {
+  flex-wrap: 1;
+  padding: 0px 20px;
+  overflow: hidden;
+}
+
+.panel section {
+  margin-bottom: 20px;
+}
+
+.tool-list {
+  display: flex;
+}
+
+.tools button {
+  margin-bottom: 5px;
+  margin-right: 10px;
+  font-size: 20px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  border: 1px solid #222;
+}
+
+.tools button.active {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.layers {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.layer {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  margin-bottom: 5px;
+}
+
+.layer.dropping:not(.dragging) {
+  outline: 2px solid #007bff;
+}
+
+.layer input {
+  border: 1px solid #bbb;
+  border-radius: 0px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.layer input:focus,
+.layer button:focus {
+  outline: 0px;
+  border: 1px solid #007bff;
+}
+
+.layer button {
+  display: block;
+  text-align: center;
+  width: 32px;
+  border: 1px solid #bbb;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.layer .drag {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right: none;
+  cursor: grab;
+}
+
+.layer .drag:active {
+  cursor: grabbing;
+}
+
+.layer .delete {
+  padding: 0px 0px 0px 3px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left: none;
+}

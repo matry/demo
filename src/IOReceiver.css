@@ -1,0 +1,18 @@
+.IOReceiver {
+  padding: 28px;
+}
+
+.IOReceiver ul {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-bottom: 24px;
+}
+
+.IOReceiver h2 {
+  margin-bottom: 8px;
+}
+
+.IOReceiver .input {
+  display: flex;
+  column-gap: 12px;
+}
